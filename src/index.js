@@ -75,38 +75,41 @@ client.on('ready', (c) => {
 });
 
 client.on('messageCreate', (msg) => {
-	//? Stop if message is from a bot
+	//* Stop if message is from a bot
 	if (msg.author.bot) return;
 
-	//? Yuki reaction
+	//* Yuki reaction
 	if (msg.content.toLowerCase().includes("yuki")) {
 		msg.react("<:yuki:1136385491504205914>");
-		msg.reply("Oh non! Pas encore ce castor!! <:yuki:1136385491504205914>");
+		if (msg.member.roles.cache.find(r => r.name == "Français"))
+			msg.reply("Oh non ! Pas encore ce castor !! <:yuki:1136385491504205914>");
+		else
+			msg.reply("Oh no! Not this beaver again!! <:yuki:1136385491504205914>");
 	}
 
-	//? Hello reactions
+	//* Hello reactions
 	var msgWords = msg.content.split(" ");
 	for (let m = 0; m < msgWords.length; m++) {
 		for (let w = 0; w < helloWords.length; w++) {
-			if(msgWords[m] == helloWords[w]) msg.react("<:NekoHi:1140744227874148555>");
+			if (msgWords[m] == helloWords[w]) msg.react("<:NekoHi:1140744227874148555>");
 		}
 	}
 });
 
-//? Slash Commands
+//* Slash Commands
 client.on('interactionCreate', (interaction) => {
 	if (!interaction.isChatInputCommand()) return;
 
 	switch (interaction.commandName) {
-		//? Meow hey hey command
+		//* Meow hey hey command
 		case 'meow':
 			interaction.reply('Meow, hey hey! <:NekoLove:1140744014686068846>');
 			break;
 
-		//? Link command
+		//* Link command
 		case 'link':
 			var linkURL = "https://";
-			//? Returning the correct link depending on the value
+			//* Returning the correct link depending on the value
 			switch (interaction.options.get('link')?.value) {
 				case 'Bandcamp':
 					linkURL += "raphaelneko.bandcamp.com/";
