@@ -1,14 +1,14 @@
-# ProtoNeko - Discord Bot
+# ProtoNeko - Discord Bot 🐱
 ### A basic bot for Raphael Neko's Discord server
 
 This is a very simple bot that doesn't have a lot of features.
 
 #### Features:
-- **Hello reactions** <br>Whenever the bots sees a "Hello message", it reacts with an emote.
-- **Yuki reactions** <br>Whenever the bots sees a message that mentions Yuki, it reacts to it with an emote and a response in the user's language depending on their language role.
-- <b><u>Slash commands:</u></b>
-  - **Links** <br>The user can select through a list the link they want to receive. The response is only visible to the one who used the command.
-  - **Meow** <br>This just make the bot replying with a "Meow, hey hey!" message.
+- **Hello reactions 👋** <br>Whenever the bots sees a "Hello message", it reacts with an emote.
+- **Yuki reactions 🦫** <br>Whenever the bots sees a message that mentions Yuki, it reacts to it with an emote and a response in the user's language depending on their language role.
+- **Slash commands:**
+  - **Links 🌐** <br>The user can select through a list the link they want to receive. The response is only visible to the one who used the command.
+  - **Meow 🐈** <br>This just make the bot replying with a "Meow, hey hey!" message.
 
 
 <br><br>
