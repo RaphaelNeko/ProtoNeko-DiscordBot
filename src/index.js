@@ -59,7 +59,7 @@ let activities = [
 let currentStatus = 0;
 
 let helloWords = [
-	"salut", "hey", "hi", "hello", "bonjour", "coucou", "cc", "koukou", "yo", "heyo", "heya", "hiya"
+	"salut", "salutations", "salutation", "hey", "hi", "hello", "bonjour", "coucou", "cc", "koukou", "yo", "heyo", "heya", "hiya"
 ];
 
 //#endregion
@@ -86,12 +86,19 @@ client.on('messageCreate', (msg) => {
 		else
 			msg.reply("Oh no! Not this beaver again!! <:yuki:1136385491504205914>");
 	}
+	if (msg.content.toLowerCase().includes("nul")) {
+		msg.react("<:NekoNul:1140744180885377176>");
+		msg.react("<:yuki:1136385491504205914>");
+	}
+	if (msg.content.toLowerCase().includes("nihi"))
+		msg.react("<:yuki:1136385491504205914>");
+
 
 	//* Hello reactions
 	var msgWords = msg.content.split(" ");
 	for (let m = 0; m < msgWords.length; m++) {
 		for (let w = 0; w < helloWords.length; w++) {
-			if (msgWords[m] == helloWords[w]) msg.react("<:NekoHi:1140744227874148555>");
+			if (msgWords[m].toLowerCase() == helloWords[w]) msg.react("<:NekoHi:1140744227874148555>");
 		}
 	}
 });

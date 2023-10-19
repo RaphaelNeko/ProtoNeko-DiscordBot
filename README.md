@@ -17,7 +17,7 @@ This is a very simple bot that doesn't have a lot of features.
 
 Just make sure to add a ".env" to the root of the folder that contains your bot token, your server ID and your bot user ID.
 
-### ".env" template**
+### ".env" template
 ```env
 TOKEN = [Your Token here]
 GUILD_ID = [Your Server ID here]
