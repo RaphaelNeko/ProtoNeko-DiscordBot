@@ -1,5 +1,7 @@
 require('dotenv').config();
 const { Client, IntentsBitField, ActivityType } = require('discord.js');
+const { CommandKit } = require('commandkit');
+const mongoose = require('mongoose');
 
 const client = new Client({
 	intents: [
@@ -11,7 +13,16 @@ const client = new Client({
 	]
 });
 
-client.login(process.env.TOKEN);
+new CommandKit({
+	client,
+	commandsPath: `${__dirname}/commands`,
+	eventsPath: `${__dirname}/events`,
+});
+
+mongoose.connect(process.env.DB_URI).then(() => {
+	console.log('☑️  Connected to DB');
+	client.login(process.env.TOKEN);
+});
 
 //#region VARIABLES
 
@@ -86,6 +97,7 @@ client.on('messageCreate', (msg) => {
 		else
 			msg.reply("Oh no! Not this beaver again!! <:yuki:1136385491504205914>");
 	}
+
 	if (msg.content.toLowerCase().includes("nul")) {
 		msg.react("<:NekoNul:1140744180885377176>");
 		msg.react("<:yuki:1136385491504205914>");
