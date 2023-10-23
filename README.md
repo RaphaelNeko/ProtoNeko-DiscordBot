@@ -15,12 +15,11 @@ This is a very simple bot that doesn't have a lot of features.
 
 **Feel free to copy and use freely my code as you want!**
 
-Just make sure to add a `.env` to **the root of the folder** that contains **your bot token**, **your server ID**, **your bot user ID**, and **your database uri**.
+Just make sure to add a `.env` to **the root of the folder** that contains **your bot token**, **your bot user ID**, and **your database uri**.
 
 ### ".env" template
 ```env
 TOKEN = [Your Token here]
-GUILD_ID = [Your Server ID here]
 CLIENT_ID = [Your bot User ID here]
 DB_URI = [Your database here]
 ```
