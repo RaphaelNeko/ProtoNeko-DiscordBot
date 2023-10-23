@@ -58,12 +58,28 @@ let activities = [
 		type: ActivityType.Playing
 	},
 	{
-		name: "Super Mario Bros. Wonder",
+		name: "Mario Kart Tour",
 		type: ActivityType.Playing
+	},
+	{
+		name: "Meow, hey hey~! 🐈✨",
+		type: ActivityType.Custom
 	},
 	{
 		name: "UNIVERSE 🌠🐈",
 		type: ActivityType.Listening
+	},
+	{
+		name: "UNIVERSE 🌠🐈",
+		type: ActivityType.Listening
+	},
+	{
+		name: "#Me",
+		type: ActivityType.Playing
+	},
+	{
+		name: "Meow, hey hey~! 🐈✨",
+		type: ActivityType.Custom
 	},
 ];
 
