@@ -1,6 +1,6 @@
 module.exports = (message, client) => {
 	if (message.author.bot) return;
-	
+
 	if (message.content.toLowerCase().includes("yuki")) {
 		message.react("<:yuki:1136385491504205914>");
 		if (message.member.roles.cache.find(r => r.name == "Français"))
