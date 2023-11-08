@@ -1,5 +1,6 @@
 module.exports = (oldMessage, newMessage, client) => {
 	if (oldMessage.author.bot) return;
+	if (oldMessage.content == newMessage.content) return;
 
 	var createdDate = new Date(oldMessage.createdTimestamp).toLocaleDateString("fr-FR");
 	var createdTime = new Date(oldMessage.createdTimestamp).toLocaleTimeString("fr-FR");
